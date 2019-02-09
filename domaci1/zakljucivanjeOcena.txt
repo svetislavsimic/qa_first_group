@@ -1,0 +1,6 @@
+Napraviti aplikaciju koja omogucava nastavniku da
+unese ocene razmaknute zarezom iz predmeta:
+1. MATEMATIKA, SRPSKI, ISTORIJA
+a zatim pritiskom na dugme PROSEK da se dobije 
+prosecna ocena za svaki pojedinacni predmet kao 
+i prosek sva tri predmeta.
