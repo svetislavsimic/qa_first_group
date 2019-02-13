@@ -5,7 +5,9 @@ import tkinter.font as tkFont
 class App:
     def __init__(self):
         win = tk.Tk()
-        self.customFont = tkFont.Font(family="Helvetica", size=14)
+        self.customFont = tkFont.Font(
+            family="Helvetica", size=14
+        )
 
         frame1 = tk.Frame(
             master=win,
@@ -30,8 +32,10 @@ class App:
         filemenu.add_separator()
         filemenu.add_command(label="Exit")
         menubar.add_cascade(label="File",  menu=filemenu)
-        menubar.add_command(label="IncreaseFont", command=self.IncreaseFont)
-        menubar.add_command(label="DecreaseFont", command=self.DecreaseFont)
+        fontMenu=tk.Menu(menubar, tearoff=1)
+        fontMenu.add_command(label="IncreaseFont", command=self.IncreaseFont)
+        fontMenu.add_command(label="DecreaseFont", command=self.DecreaseFont)
+        menubar.add_cascade(label="Font", menu=fontMenu)
         win.config(menu=menubar)
 
 
