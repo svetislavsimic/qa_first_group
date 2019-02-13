@@ -30,7 +30,7 @@ class App:
         filemenu.add_command(label="Open",)
         filemenu.add_command(label="Save",)
         filemenu.add_separator()
-        filemenu.add_command(label="Exit")
+        filemenu.add_command(label="Exit", command=self.Exit)
         menubar.add_cascade(label="File",  menu=filemenu)
         fontMenu=tk.Menu(menubar, tearoff=1)
         fontMenu.add_command(label="IncreaseFont", command=self.IncreaseFont)
@@ -49,4 +49,7 @@ class App:
         size = self.customFont['size']
         if size-2>0:
             self.customFont.configure(size=size - 2)
+
+    def Exit(self):
+        pass
 app=App()
