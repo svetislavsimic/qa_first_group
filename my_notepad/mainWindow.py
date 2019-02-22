@@ -8,6 +8,7 @@ import os
 class App:
     def __init__(self,filename=None):
         self.win = tk.Tk()
+        self.win.protocol("WM_DELETE_WINDOW", self.Exit)
         self.customFont = tkFont.Font(
             family="Helvetica", size=14
         )
@@ -56,6 +57,7 @@ class App:
     def Exit(self):
         result = messagebox.askyesnocancel(title="Python",message="Would you like to save the data?")
         if result:
+            self.Save()
             self.win.destroy()
         else:
             pass
