@@ -4,6 +4,7 @@ import tkinter.font as tkFont
 from tkinter import messagebox
 from tkinter import filedialog
 import os
+import shutil
 
 class App:
     def __init__(self,filename=None):
@@ -32,6 +33,8 @@ class App:
         filemenu = tk.Menu(menubar, tearoff=0)
         filemenu.add_command(label="Open", command=self.Open)
         filemenu.add_command(label="Save", command=self.Save)
+
+        filemenu.add_command(label="Rename", command=self.Rename)
         filemenu.add_separator()
         filemenu.add_command(label="Exit", command=self.Exit)
         menubar.add_cascade(label="File",  menu=filemenu)
@@ -56,6 +59,7 @@ class App:
     def Exit(self):
         result = messagebox.askyesnocancel(title="Python",message="Would you like to save the data?")
         if result:
+            self.Save()
             self.win.destroy()
         else:
             pass
@@ -77,5 +81,17 @@ class App:
         with f:
             text2save = str(self.editArea.get(1.0, "end"))  # starts from `1.0`, not `0.0`
             f.write(text2save)
+
+    def Rename(self):
+        if self.filename:
+            pathToDir=os.path.dirname(self.filename)
+            f = filedialog.asksaveasfile(mode='w', defaultextension=".txt", initialdir=pathToDir)
+            if f:
+                print(f)
+                shutil.move(self.filename, f.name)
+                self.filename=f.name
+        else:
+            self.Save()
+
 
 app=App()
