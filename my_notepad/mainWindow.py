@@ -9,6 +9,7 @@ import shutil
 class App:
     def __init__(self,filename=None):
         self.win = tk.Tk()
+        self.win.protocol("WM_DELETE_WINDOW", self.Exit)
         self.customFont = tkFont.Font(
             family="Helvetica", size=14
         )
