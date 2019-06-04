@@ -1,0 +1,3 @@
+Za domaci:
+1. Napraviti aplikaciju u tkinteru za evidenciju
+dolaska na casove
