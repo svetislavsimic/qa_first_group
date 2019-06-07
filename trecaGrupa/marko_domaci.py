@@ -105,7 +105,7 @@ class Main(object):
         # dodaj studenta
         self.iconstudent = PhotoImage(file='icons/users.png')
         self.btnstudent = Button(topFrame, text='Dodaj Studenta',
-                                 font='arial 12 bold', padx=10)
+                                 font='arial 12 bold', padx=10, command=self.dodaj_studenta)
         self.btnstudent.configure(image=self.iconstudent, compound=LEFT)
         self.btnstudent.pack(side=LEFT)
 
@@ -160,6 +160,10 @@ class Main(object):
 
     def dodaj_predmet(self):
         add = dodajpredmet.AddPredmet()
+
+
+    def dodaj_studenta(self):
+        student = dodajstudenta.DodajStudenta()
 
 
 def main():
