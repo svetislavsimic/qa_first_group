@@ -3,6 +3,10 @@ from tkinter import ttk
 import sqlite3
 import dodajpredmet, dodajstudenta
 
+''' TO DO :
+    
+    Potrebno završiti rad sa bazom i logikom aplikacije'''
+
 con = sqlite3.connect('evidencija.db')
 cur = con.cursor()
 # con.execute('''CREATE TABLE PREDMETI (ID INT PRIMARY KEY NOT NULL,
