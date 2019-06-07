@@ -5,6 +5,7 @@ import sqlite3
 con = sqlite3.connect('evidencija.db')
 cur = con.cursor()
 
+
 class DodajStudenta(Toplevel):
     def __init__(self):
         Toplevel.__init__(self)
