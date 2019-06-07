@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 import sqlite3
-import dodajpredmet
+import dodajpredmet, dodajstudenta
 
 con = sqlite3.connect('evidencija.db')
 cur = con.cursor()
