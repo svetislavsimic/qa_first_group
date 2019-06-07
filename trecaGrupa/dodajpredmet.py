@@ -53,7 +53,7 @@ class AddPredmet(Toplevel):
 
         # button
         button = Button(self.bottomFrame, text='Dodaj Predmet', command=self.dodaj_predmet)
-        button.place(x=270, y=200)
+        button.place(x=270, y=120)
 
     def dodaj_predmet(self):
         pass
