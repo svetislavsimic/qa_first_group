@@ -52,10 +52,10 @@ class DodajStudenta(Toplevel):
 
 
         # button
-        button = Button(self.bottomFrame, text='Dodaj', command=self.dodaj_predmet)
+        button = Button(self.bottomFrame, text='Dodaj', command=self.dodaj_studenta)
         button.place(x=270, y=120)
 
-    def dodaj_predmet(self):
+    def dodaj_studenta(self):
         pass
 
 
